@@ -1,4 +1,4 @@
-# The-Business-Game
+# The Business Game
 
 Mi Juego
 gonzalocaballero@me.com
