@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "BackButton.png",
+      "filename" : "selectyourbusiness.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "BackButton-1.png",
+      "filename" : "selectyourbusiness-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "BackButton-2.png",
+      "filename" : "selectyourbusiness-2.png",
       "scale" : "3x"
     }
   ],

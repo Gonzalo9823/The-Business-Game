@@ -46,7 +46,6 @@ class LoginViewController: UIViewController {
             }
             else {
                 print("haz iniciado secion")
-                register = false
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         })

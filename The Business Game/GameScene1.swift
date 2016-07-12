@@ -94,12 +94,12 @@ class GameScene1: SKScene {
         self.menuNode.addChild(mostrarMenu)
         
         if subirObajar {
-            let moverse = SKAction(named: "subirMenuPrincipal")
+            let moverse = SKAction(named: "subirMenu")
             self.menuNode.runAction(moverse!)
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCaseOpen")
             paraSaberSiBajaOSube = false
         } else {
-            let moverse = SKAction(named: "bajarMenuPrincipal")
+            let moverse = SKAction(named: "bajarMenu1")
             self.menuNode.runAction(moverse!)
             paraSaberSiBajaOSube = true
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCase")
@@ -114,12 +114,12 @@ class GameScene1: SKScene {
         
         
         if subirOBajar {
-            let moverse = SKAction(named: "subirMenuDerecha")
+            let moverse = SKAction(named: "subirMenu")
             self.menuNode.runAction(moverse!)
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCaseOpen")
             paraSaberSiBajaOSube = false
         } else {
-            let moverse = SKAction(named: "bajarMenuDerecha")
+            let moverse = SKAction(named: "bajarMenu1")
             self.menuNode.runAction(moverse!)
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCase")
             paraSaberSiBajaOSube = true
@@ -134,12 +134,12 @@ class GameScene1: SKScene {
         self.menuNode.addChild(mostrarMenu)
         
         if subirObajar {
-            let moverse = SKAction(named: "subirMenuIzquierdo")
+            let moverse = SKAction(named: "subirMenu")
             self.menuNode.runAction(moverse!)
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCaseOpen")
             paraSaberSiBajaOSube = false
         } else {
-            let moverse = SKAction(named: "bajarMenuIzquierdo")
+            let moverse = SKAction(named: "bajarMenu1")
             self.menuNode.runAction(moverse!)
             self.botonMenu.texture = SKTexture(imageNamed: "BriefCase")
             paraSaberSiBajaOSube = true
@@ -153,29 +153,3 @@ class GameScene1: SKScene {
         subirIzquierdo(false)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,15 +9,18 @@
 import UIKit
 import SpriteKit
 
+let registerSavedValue = NSUserDefaults.standardUserDefaults()
 var register = true
 
 class GameViewController: UIViewController {
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if register {
-            print("hi")
+        //let register = registerSavedValue.boolForKey("register")
+        
+        if register  {
+            print("ss")
+            print(register)
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Login") as! UINavigationController
             presentViewController(vc, animated: true, completion: nil)
             
@@ -35,7 +38,6 @@ class GameViewController: UIViewController {
                 
                 skView.presentScene(scene)
             }
-            
         }else {
             
             if let scene = GameScene1(fileNamed:"GameScene1") {
