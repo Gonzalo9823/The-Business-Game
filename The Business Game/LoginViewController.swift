@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var passWord: UITextField!
-    @IBOutlet weak var logInLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     func dismissKeyboard() {
@@ -39,10 +39,11 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func logIn(sender: AnyObject) {
+        activityIndicator.startAnimating()
         FIRAuth.auth()?.signInWithEmail(userName.text!, password: passWord.text!, completion: {
             user, error in
             if error != nil {
-                self.logInLabel.hidden = false
+                self.activityIndicator.stopAnimating()
             }
             else {
                 print("haz iniciado secion")

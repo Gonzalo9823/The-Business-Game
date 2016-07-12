@@ -312,9 +312,12 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="LogIn"/>
                                 <connections>
-                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Jn-OD-hzD"/>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Knw-it-68U"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cYF-aK-rbk">
+                                <rect key="frame" x="169" y="259" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.13333334028720856" green="0.55294120311737061" blue="0.85490196943283081" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -337,6 +340,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="cYF-aK-rbk" id="2Ja-VM-pj2"/>
                         <outlet property="passWord" destination="Y8x-7m-4dU" id="Oas-1Z-Zwk"/>
                         <outlet property="userName" destination="tUC-AO-DGS" id="NLq-ev-kqe"/>
                     </connections>

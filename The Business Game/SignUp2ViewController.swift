@@ -17,11 +17,16 @@ class SignUp2ViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
         
     }
+    
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet weak var companyName: UITextField!
     
     var ref = FIRDatabase.database().reference()
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +40,16 @@ class SignUp2ViewController: UIViewController {
     }
     
     @IBAction func gamesOption(sender: AnyObject) {
+        
         if companyName.text != "" {
+            self.activityIndicatorView.startAnimating()
             FIRAuth.auth()?.createUserWithEmail(mailOfPlayer, password: passwordOfPlayer, completion: {
                 user, error in
                 if error != nil {
                     print("ERROR!")
+                    self.activityIndicatorView.stopAnimating()
                 }
                 else {
-                    self.activityIndicatorView.startAnimating()
                     var userInfo: [String: String] =
                         [   "Name": "",
                             "Country": "",
@@ -67,14 +74,16 @@ class SignUp2ViewController: UIViewController {
     }
     
     @IBAction func clothDesigner(sender: AnyObject) {
+        self.activityIndicatorView.startAnimating()
+
         if companyName.text != "" {
             FIRAuth.auth()?.createUserWithEmail(mailOfPlayer, password: passwordOfPlayer, completion: {
                 user, error in
                 if error != nil {
                     print("ERROR!")
+                    self.activityIndicatorView.stopAnimating()
                 }
                 else {
-                    self.activityIndicatorView.startAnimating()
                     var userInfo: [String: String] =
                         [   "Name": "",
                             "Country": "",
